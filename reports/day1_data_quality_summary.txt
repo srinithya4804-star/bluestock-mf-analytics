@@ -1,0 +1,9 @@
+Day 1 Data Quality Summary
+========================================
+
+Fund master unique AMFI codes: 40
+NAV history unique AMFI codes: 40
+Codes in fund_master missing from nav_history: 0
+Codes in nav_history not present in fund_master: 0
+
+Overall assessment: All fund_master AMFI codes have corresponding NAV history. Data is consistent.
