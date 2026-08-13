@@ -15,39 +15,73 @@ Live NAV data fetched from the mfapi.in public API
 The pipeline produces a cleaned SQLite database, three analysis notebooks, a fund recommender tool, and a 4-page interactive Power BI dashboard.
 
 Project Structure
+
 bluestock-mf-analytics/
+
 ├── data/
-│   ├── raw/                     # 10 provided CSVs + live-fetched NAV data
+
+│   ├── raw/                      # 10 provided CSVs + live-fetched NAV data
+
 │   └── processed/                # Cleaned versions of all 10 datasets
+
 ├── notebooks/
+
 ├── sql/
+
 ├── dashboard/
+
 ├── reports/
-│   ├── eda_charts/                # EDA_Analysis.ipynb chart exports
+
+│   ├── eda_charts/                 # EDA_Analysis.ipynb chart exports
+
 │   ├── performance_charts/        # Performance_Analytics.ipynb chart exports
+
 │   └── advanced_charts/           # Advanced_Analytics.ipynb chart exports
+
 ├── data_ingestion.py               # Day 1: load & inspect raw CSVs
+
 ├── live_nav_fetch.py               # Day 1: fetch live NAV from mfapi.in
+
 ├── clean_data.py                   # Day 2: clean all datasets
+
 ├── schema.sql                      # Day 2: star schema DDL
+
 ├── load_to_sqlite.py               # Day 2: load cleaned data into SQLite
+
 ├── queries.sql                     # Day 2: 10 analytical SQL queries
+
 ├── run_queries.py                  # Day 2: convenience script to run queries.sql
+
 ├── data_dictionary.md              # Day 2: column-level documentation
+
 ├── EDA_Analysis.ipynb              # Exploratory Data Analysis (15+ charts)
+
 ├── Performance_Analytics.ipynb     # CAGR, Sharpe, Sortino, Alpha/Beta, drawdown, scorecard
+
 ├── fund_scorecard.csv              # Output: composite 0-100 fund ranking
+
 ├── alpha_beta.csv                  # Output: Alpha/Beta per fund
+
 ├── Advanced_Analytics.ipynb        # VaR/CVaR, rolling Sharpe, cohorts, SIP continuity, HHI
+
 ├── var_cvar_report.csv             # Output: 95% VaR/CVaR per fund
+
 ├── recommender.py                  # Standalone fund recommender (risk-based)
+
 ├── run_pipeline.py                 # Master script: runs the full ETL pipeline end-to-end
+
 ├── bluestock_mf.db                 # SQLite database (star schema)
+
 ├── bluestock_mf_dashboard.pbix     # Power BI dashboard (4 pages)
+
 ├── Final_Report.pdf                # Final written report
+
 ├── Bluestock_MF_Presentation.pptx  # Final 12-slide presentation
+
 ├── requirements.txt
+
 └── README.md
+
 Setup Instructions
 1. Clone the repository
 bash
